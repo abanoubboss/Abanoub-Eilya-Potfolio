@@ -704,4 +704,101 @@ nav a::after {
   color: #0077ff;
 }
 
+/* Fixed nav a hover & active */
+nav a{
+  font-size: 1.6rem;
+  color: rgba(230,238,246,0.9);
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  transition: all .36s cubic-bezier(.2,.9,.2,1);
+  position: relative;
+  text-decoration: none;
+  background: none; /* fix background */
+  border: none; /* fix border */
+  box-shadow: none; /* fix shadow */
+}
+nav a:hover{
+  color: #061220;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(226,87,87,0.12);
+}
+nav a.active{
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.02);
+  color: var(--accent-2);
+}
+
+/* Fix project-card video-only */
+.project-card.video-only {
+  aspect-ratio: 16 / 9;
+  min-height: 320px; /* ensure minimum height */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  cursor: auto;
+}
+.project-card.video-only::after {
+  display: none;
+}
+.project-card.video-only iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: auto;
+  min-height: 320px;
+}
+
+/* Contact section */
+#contact {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+#contact h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
+}
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#contact input,
+#contact textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+#contact button {
+  padding: 1rem;
+  background: #0077ff;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#contact button:hover {
+  background: #005fcc;
+}
+#form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #0077ff;
+}
+
+/* small responsive fix */
+@media (max-width: 720px){
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
