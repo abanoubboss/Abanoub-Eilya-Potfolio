@@ -801,4 +801,44 @@ nav a.active{
   }
 }
 
+/* =====================
+   Fix Contact Form Fields
+   ===================== */
+form[action*="formspree"] input,
+form[action*="formspree"] textarea {
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02); /* نفس ستايل الموقع */
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #e6eef6;
+  font-size: 1.4rem;
+  width: 100%;
+  transition: box-shadow 0.25s, transform 0.18s;
+  resize: vertical;
+}
+
+form[action*="formspree"] input:focus,
+form[action*="formspree"] textarea:focus {
+  box-shadow: 0 18px 60px rgba(138,227,255,0.06);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+form[action*="formspree"] button {
+  border-radius: 12px;
+  padding: 1rem 2.4rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #061220;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border: 1px solid rgba(255,255,255,0.04);
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.25s ease;
+}
+
+form[action*="formspree"] button:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(226,87,87,0.12);
+}
+
 
