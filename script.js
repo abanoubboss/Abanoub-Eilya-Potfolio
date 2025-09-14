@@ -237,4 +237,9 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+document.querySelector('a.btn[href="#contact"]').addEventListener("click", function(e) {
+  e.preventDefault();
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+});
+
 
