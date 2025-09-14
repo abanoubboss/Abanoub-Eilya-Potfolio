@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abanoub Boss | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="header-banner"></div>
+  <a href="#" class="logo">Abanoub</a>
+  <nav id="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#services">Services</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <i class="fa-solid fa-bars" id="menu-icon"></i>
+</header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-img">
+      <img src="main.jpg" alt="Abanoub Profile"/>
+    </div>
+    <div class="home-content">
+      <h1>Hi, I'm <span>Abanoub Boss</span></h1>
+      <h3 class="typing-text">I'm a <span id="typing"></span></h3>
+      <p>
+        I am a professional <strong>Video Editor</strong> with 6 years of experience since 2019, 
+        passionate about creating cinematic, engaging, and high-quality video content.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/abanoub-eilya-rady-halem-60bbb3348" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:abanoubeelya@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/201280528102"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <a href="#contact" class="btn">Hire me</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2 class="section-title">My Services</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-video"></i>
+        <h3>Video Editing</h3>
+        <p>Professional editing for intros, ads, YouTube, and cinematic videos.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-film"></i>
+        <h3>Motion Graphics</h3>
+        <p>Adding animations, transitions, and visual effects for engaging content.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Basic Design</h3>
+        <p>Creating thumbnails, posters, and branding visuals for projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skill-list">
+      <li>DaVinci Resolve</li>
+      <li>CapCut</li>
+      <li>iMovie</li>
+      <li>Motion Graphics</li>
+      <li>Color Grading</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+
+      <!-- Nexit Construction -->
+      <div class="project-card video-only">
+        <iframe src="https://www.youtube.com/embed/ngixgXdh56M?si=Xahuye3ooNiXWH2R"
+          title="Nexit Construction Intro"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- Repo Construction -->
+      <div class="project-card video-only">
+        <iframe src="https://www.youtube.com/embed/Dl0nX1o2cG8?si=sU0vYf1uXbbM309-"
+          title="Repo Construction Intro"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- Ajman Football Club -->
+      <div class="project-card video-only">
+        <iframe src="https://www.youtube.com/embed/GBikyHyoDn4?si=nnscwPtoliTEXURw"
+          title="Ajman Football Club Intro"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- Sobzee Shipping -->
+      <div class="project-card video-only">
+        <iframe src="https://www.youtube.com/embed/eGGjCz9Koi8?si=BOL190Linv1bSyEH"
+          title="Sobzee Shipping Intro"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form id="contact-form" action="https://formspree.io/f/xrbavgew" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <!-- Success / Error message -->
+    <p id="form-status" style="margin-top:1rem; color: var(--accent-2); font-weight:600;"></p>
+  </section>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
