@@ -642,9 +642,4 @@ body.dark-mode section {
   transition: transform 0.1s ease;
   z-index: 2000;
 }
-.header-banner {
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(90deg, #ff4d4d, #6a5acd, #00bfff);
-}
 
