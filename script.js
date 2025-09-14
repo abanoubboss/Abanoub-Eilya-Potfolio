@@ -40,20 +40,29 @@ scrollTopBtn.onclick = () =>
   window.scrollTo({ top: 0, behavior: "smooth" });
 
 // ========================
-// Contact Form (Formspree)
+// Contact Form (Formspree + Validation)
 // ========================
 const form = document.getElementById("contact-form");
 const statusTxt = document.getElementById("form-status");
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
+
+  const email = form.querySelector('input[name="email"]').value;
+  if (!email.includes("@")) {
+    statusTxt.innerHTML = "⚠️ Please enter a valid email.";
+    return;
+  }
+
   const data = new FormData(form);
+
   try {
     const response = await fetch(form.action, {
       method: form.method,
       body: data,
       headers: { Accept: "application/json" },
     });
+
     if (response.ok) {
       statusTxt.innerHTML = "✅ Message sent successfully!";
       form.reset();
@@ -64,6 +73,7 @@ form.addEventListener("submit", async function (e) {
     statusTxt.innerHTML = "⚠️ Connection problem.";
   }
 });
+
 
 // ========================
 // Project Modal Functionality
@@ -226,4 +236,5 @@ form.addEventListener("submit", async (e) => {
     statusTxt.innerHTML = "⚠️ Connection problem.";
   }
 });
+
 
