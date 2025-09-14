@@ -643,3 +643,14 @@ body.dark-mode section {
   z-index: 2000;
 }
 
+nav a {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+nav a::before,
+nav a::after {
+  display: none !important;
+}
+
