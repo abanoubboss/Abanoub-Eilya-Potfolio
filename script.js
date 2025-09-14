@@ -202,3 +202,28 @@ form.addEventListener("submit", async function (e) {
     statusTxt.innerHTML = "⚠️ Connection problem.";
   }
 });
+const form = document.getElementById("contact-form");
+const statusTxt = document.getElementById("form-status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      statusTxt.innerHTML = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      statusTxt.innerHTML = "❌ Something went wrong. Please try again.";
+    }
+  } catch (error) {
+    statusTxt.innerHTML = "⚠️ Connection problem.";
+  }
+});
+
